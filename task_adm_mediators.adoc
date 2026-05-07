@@ -1,0 +1,32 @@
+---
+sidebar: sidebar 
+permalink: task_adm_mediators.html 
+keywords: administer, administering, web, mediators 
+summary: 每個 ONTAP Select 雙節點叢集都由中介服務監控，該服務協助管理節點共享的高可用性功能。 
+---
+= 管理 ONTAP Select Deploy 中介服務
+:hardbreaks:
+:allow-uri-read: 
+:nofooter: 
+:icons: font
+:linkattrs: 
+:imagesdir: ./media/
+
+
+[role="lead"]
+每個 ONTAP Select 雙節點叢集都由中介服務監控，該服務協助管理節點共享的高可用性功能。
+
+
+
+== 檢視 mediator 服務的狀態
+
+您可以查看 ONTAP Select Deploy 實用程式定義的每個雙節點叢集的中介服務狀態。
+
+.關於此任務
+您可以查看每個中介器的配置，包括目前狀態、兩個 ONTAP Select 節點以及儲存 HA 控制資訊的 iSCSI 目標。將滑鼠懸停在頁面上的物件上即可顯示詳細資訊。
+
+.步驟
+. 使用管理員帳戶 Sign in Deploy 實用程式 Web 使用者介面。
+. 點擊頁面頂部的 *Administration* 選項卡，然後點擊 *Mediators*。
+. （選用）按一下 *Filter* 以自訂中介服務所監控之雙節點叢集的檢視。
+
