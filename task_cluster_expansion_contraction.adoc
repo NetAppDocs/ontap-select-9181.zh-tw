@@ -35,6 +35,7 @@ ESXi 和 KVM 主機不支援下列叢集擴充和收縮：
 
 
 
+[[hardware-and-storage-considerations]]
 == 硬體和儲存考量
 
 下列 KVM 和 ESXi Hypervisor 主機支援叢集擴充和收縮功能。
@@ -69,6 +70,7 @@ ESXi 和 KVM 主機不支援下列叢集擴充和收縮：
 ====
 
 
+[[expand-the-cluster]]
 == 擴充叢集
 
 使用叢集擴充功能來增加現有 ONTAP Select 叢集的大小。
@@ -124,6 +126,7 @@ ESXi 和 KVM 主機不支援下列叢集擴充和收縮：
 
 
 
+[[contract-the-cluster]]
 == 收縮叢集
 
 使用叢集收縮功能來減少現有 ONTAP Select 叢集的大小。

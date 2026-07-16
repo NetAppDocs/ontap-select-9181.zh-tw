@@ -21,6 +21,7 @@ NOTE: 故障硬碟的移除和新硬碟（標記為備用硬碟）的新增都�
 
 
 
+[[identify-the-failed-drive]]
 == 識別故障磁碟機
 
 當磁碟機故障時、您需要使用 ONTAP CLI 來識別故障的磁碟。
@@ -86,6 +87,7 @@ NET-1.4 893.3GB - - SSD broken - sti-rx2540-346a'
 ====
 
 
+[[remove-the-failed-drive]]
 == 移除故障磁碟機
 
 確定故障磁碟機後，將其取出。
@@ -211,6 +213,7 @@ image:ST_26.jpg["警告"]
 ====
 
 
+[[add-the-new-spare-drive]]
 == 新增新的備用磁碟機
 
 取出故障磁碟機後，請新增備用磁碟。

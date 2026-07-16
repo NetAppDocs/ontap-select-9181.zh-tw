@@ -18,6 +18,7 @@ summary: 確定 ONTAP Select 適合您的組織後、即可購買支援正式作
 
 
 
+[[common-licensing-characteristics]]
 == 常見授權特性
 
 _Capacity Pools_ 和 _Capacity Tiers_ 授權模式在多個方面有顯著差異。然而，這兩種授權模式也具有一些共同特徵，包括：
@@ -33,6 +34,7 @@ _Capacity Pools_ 和 _Capacity Tiers_ 授權模式在多個方面有顯著差異
 
 
 
+[[capacity-tiers-licensing-model]]
 == Capacity Tiers 授權模式
 
 容量分層授權模式有以下幾個獨特特點：
@@ -50,6 +52,7 @@ _Capacity Pools_ 和 _Capacity Tiers_ 授權模式在多個方面有顯著差異
 
 
 
+[[capacity-pools-licensing-model]]
 == Capacity Pools 授權模式
 
 容量池授權模式具有以下幾個獨特特點：

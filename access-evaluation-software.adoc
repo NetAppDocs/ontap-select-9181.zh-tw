@@ -30,6 +30,7 @@ NOTE: 您無法延長評估授權。在 90 天結束時，授權將不再運作�
 
 
 
+[[step-1-register-for-an-account]]
 == 步驟 1：註冊帳戶
 
 如有需要，完成 NetApp 帳戶註冊並申請潛在客戶存取。
@@ -73,6 +74,7 @@ NOTE: 免費電子郵件帳戶 (例如 gmail 或 yahoo) 不被接受。
 
 
 
+[[step-2-download-ontap-select-evaluation-software]]
 == 步驟 2：下載 ONTAP Select 評估軟體
 
 您的支援案例經審核批准後，NetApp 支援團隊會透過您提供的電子郵件地址通知您。

@@ -18,12 +18,14 @@ ONTAP Select 是以 ONTAP 儲存軟體為基礎所建置、採用高可用度、
 
 
 
+[[snapshot-data-protection]]
 == 快照資料保護
 
 ONTAP Select 包含資料保護功能，包括快照和 SnapMirror 軟體。您可以快速將資料複寫到其他 ONTAP 儲存設備，無論是在內部部署、遠端站台或雲端。如果您必須快速恢復資料、SnapRestore 軟體可以使用本機快照在幾秒鐘內恢復整個檔案系統或資料磁碟區，無論容量或檔案數量為何。
 
 
 
+[[metrocluster-software-defined-storage]]
 == MetroCluster 軟體定義儲存
 
 ONTAP Select MetroCluster 軟體定義儲存（SDS）提供增強的保護和經濟高效的實施方案。

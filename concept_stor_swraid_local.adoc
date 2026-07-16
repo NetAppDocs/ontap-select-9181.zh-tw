@@ -42,6 +42,7 @@ summary: 軟體 RAID 是 ONTAP 軟體堆疊中實作的 RAID 抽象層。它提�
 ====
 
 
+[[software-raid-configuration-for-local-attached-storage]]
 == 本機附加儲存設備的軟體 RAID 組態
 
 使用軟體 RAID 時，理想情況下不需要硬體 RAID 控制器；但是，如果系統確實有現有的 RAID 控制器，則必須遵守以下要求：
@@ -59,6 +60,7 @@ NOTE: 管理員需要追蹤 ONTAP Select VM 正在使用的磁碟機,並防止�
 
 
 
+[[ontap-select-virtual-and-physical-disks]]
 == ONTAP Select 虛擬和實體磁碟
 
 對於採用硬體 RAID 控制器的組態、實體磁碟備援由 RAID 控制器提供。ONTAP Select 會提供一個或多個 VMDK、ONTAP 管理員可從中設定資料集合體。這些 VMDK 會以 RAID 0 格式進行等量分割、因為使用 ONTAP 軟體 RAID 是多餘的、效率不佳、而且由於硬體層級提供的恢復能力而無效。此外、用於系統磁碟的 VMDK 與用於儲存使用者資料的 VMDK 位於相同的資料存放區中。
@@ -98,6 +100,7 @@ ONTAP 軟體 RAID 支援下列 RAID 類型：RAID 4、RAID-DP 和 RAID-TEC。這
 
 
 
+[[passthrough-directpath-io-devices-vs-raw-device-maps-rdms]]
 == 直通（DirectPath IO）裝置與原始裝置對應（RDM）
 
 ESXi 和 KVM 虛擬機器管理程式不支援將 NVMe 磁碟作為裸裝置對應（RDM）使用。若要讓 ONTAP Select 直接控制 NVMe 磁碟、您必須在 ESXi 或 KVM 中將這些磁碟機配置為直通裝置。將 NVMe 裝置配置為直通裝置需要伺服器 BIOS 的支援、而且您可能需要重新啟動主機。此外、每個主機可指派的直通裝置數量有限制、具體數量可能因平台而異。不過、ONTAP Deploy 將每個 ONTAP Select 節點的 NVMe 裝置數量限制為 14 個。這表示 NVMe 組態以犧牲總容量為代價、提供了非常高的 IOPS 密度（IOPS/TB）。或者、如果您需要具有更大儲存容量的高效能組態、建議的組態是使用較大的 ONTAP Select VM 大小、Intel Optane 卡作為系統磁碟、以及適量的 SSD 磁碟機進行資料儲存。
@@ -109,6 +112,7 @@ NOTE: 若要充分發揮 NVMe 的效能，請考慮使用較大的 ONTAP Select 
 
 
 
+[[physical-and-virtual-disk-provisioning]]
 == 實體和虛擬磁碟資源配置
 
 為了提供更流暢的使用者體驗，ONTAP Deploy 會自動從指定的資料儲存區（實體系統磁碟）配置系統（虛擬）磁碟，並將其附加到 ONTAP Select VM。此作業會在初始設定期間自動執行，以便 ONTAP Select VM 能夠開機。RDM 會被分割，並自動建置根 Aggregate。如果 ONTAP Select 節點是 HA 配對的一部分，則資料分割區會自動指派給本機儲存資源池和鏡射儲存資源池。此指派會在叢集建立作業和儲存設備新增作業期間自動執行。
@@ -124,6 +128,7 @@ NOTE: 根 Aggregate 的 RAID 群組類型取決於可用磁碟的數量。ONTAP 
 
 
 
+[[match-an-ontap-select-disk-to-the-corresponding-esxi-or-kvm-disk]]
 == 將 ONTAP Select 磁碟與對應的 ESXi 或 KVM 磁碟相匹配
 
 ONTAP Select 磁碟通常標示為 NET x.y。您可以使用下列 ONTAP 指令取得磁碟 UUID：
@@ -165,6 +170,7 @@ cat /sys/block/<block_device_id>/device/wwid
 ====
 
 
+[[multiple-drive-failures-when-using-software-raid]]
 == 使用軟體 RAID 時出現多個磁碟機故障
 
 系統可能會遇到多個磁碟機同時處於故障狀態的情況。系統的行為取決於 Aggregate RAID 保護和故障磁碟機的數量。
@@ -244,6 +250,7 @@ disk show -broken
 ====
 
 
+[[virtualized-nvram]]
 == 虛擬化 NVRAM
 
 NetApp FAS 系統通常配備一塊實體 NVRAM PCI 卡。這塊卡片效能卓越，內建非揮發性快閃記憶體，可大幅提升寫入效能。其原理是使 ONTAP 能夠立即向客戶端確認收到的寫入資料。此外，它還可以安排將修改後的資料區塊移回速度較慢的儲存媒體，這一過程稱為 destaging。

@@ -18,6 +18,7 @@ ONTAP Select 支援單節點和多節點網路組態。
 
 
 
+[[single-node-network-configuration]]
 == 單節點網路組態
 
 單節點 ONTAP Select 組態不需要 ONTAP 內部網路、因為沒有叢集、HA 或鏡射流量。
@@ -41,6 +42,7 @@ NOTE: 即使單節點叢集只需要兩個介面卡，仍然需要 NIC 群組。
 
 
 
+[[lif-assignment]]
 === LIF 指派
 
 如本文件多節點 LIF 指派區段所述，ONTAP 使用 IPspace 將叢集網路流量與資料和管理流量分開。此平台的單節點變體不包含叢集網路。因此，叢集 IPspace 中不存在任何連接埠。
@@ -50,6 +52,7 @@ NOTE: 在 ONTAP Select 叢集設定過程中，叢集和節點管理 LIF 會自�
 
 
 
+[[management-and-data-lifs-e0a-e0b-and-e0c]]
 === 管理和資料 LIF（e0a、e0b 和 e0c）
 
 ONTAP 連接埠 e0a、e0b 和 e0c 被委派為 LIF 的候選連接埠，用於承載以下類型的流量：
@@ -61,6 +64,7 @@ ONTAP 連接埠 e0a、e0b 和 e0c 被委派為 LIF 的候選連接埠，用於�
 
 
 
+[[multi-node-network-configuration]]
 == 多節點網路組態
 
 多節點 ONTAP Select 網路組態由兩個網路組成。
@@ -102,6 +106,7 @@ NOTE: 外部網路連接埠群組和內部網路連接埠群組均以對稱方�
 
 
 
+[[lif-assignment]]
 === LIF 指派
 
 隨著 IPspaces 的引入，ONTAP 連接埠角色已被棄用。與 FAS 陣列類似，ONTAP Select 叢集包含預設 IPspace 和叢集 IPspace。透過將網路連接埠 e0a、e0b 和 e0g 放入預設 IPspace，並將連接埠 e0c 和 e0d 放入叢集 IPspace，這些連接埠實際上被隔離，無法承載不屬於該空間的 LIF。ONTAP Select 叢集中的其餘連接埠透過自動分配介面來提供內部服務。與 RSM 和 HA 互連介面不同，這些連接埠不會透過 ONTAP shell 公開。
@@ -113,6 +118,7 @@ NOTE: 並非所有 LIF 都可透過 ONTAP 指令 shell 存取。HA 互連和 RSM
 
 
 
+[[management-and-data-lifs-e0a-e0b-and-e0g]]
 === 管理和資料 LIF（e0a、e0b 和 e0g）
 
 ONTAP 連接埠 e0a、e0b 和 e0g 被委派為 LIF 的候選連接埠，用於承載以下類型的流量：
@@ -127,6 +133,7 @@ NOTE: 在 ONTAP Select 叢集設定過程中，叢集和節點管理 LIF 會自�
 
 
 
+[[cluster-network-lifs-e0c-e0d]]
 === 叢集網路 LIF（e0c、e0d）
 
 ONTAP 連接埠 e0c 和 e0d 被委派為叢集介面的主連接埠。在每個 ONTAP Select 叢集節點內，ONTAP 設定期間會使用連結本機 IP 位址（169.254.x.x）自動產生兩個叢集介面。
@@ -143,6 +150,7 @@ NOTE: 為確保叢集網路流量的最大處理量，此網路連接埠配置�
 
 
 
+[[raid-syncmirror-traffic-e0e]]
 === RAID SyncMirror 流量 (e0e)
 
 HA 夥伴節點之間的區塊同步複寫是透過位於網路連接埠 e0e 的內部網路介面進行。此功能會自動執行，使用 ONTAP 在叢集設定期間所設定的網路介面，不需要管理員進行任何組態設定。
@@ -152,6 +160,7 @@ NOTE: 連接埠 e0e 已被 ONTAP 用於內部複寫流量。因此，此連接�
 
 
 
+[[ha-interconnect-e0f]]
 === HA 互連（e0f）
 
 NetApp FAS 陣列使用專用硬體在 ONTAP 叢集中的 HA 配對之間傳遞資訊。然而，軟體定義環境通常不具備此類設備（例如 InfiniBand 或 iWARP 裝置），因此需要替代解決方案。儘管考慮了多種可能性，但 ONTAP 對互連傳輸的要求決定了此功能必須在軟體中模擬。因此，在 ONTAP Select 叢集中，HA 互連功能（傳統上由硬體提供）已設計到作業系統中，並使用乙太網路作為傳輸機制。

@@ -18,6 +18,7 @@ summary: 您應該準備好檢閱並使用工作流程程序。
 
 
 
+[[understand-the-api-calls-used-in-the-workflows]]
 == 了解工作流程中使用的 API 呼叫
 
 ONTAP Select 線上文件頁面包含每個 REST API 呼叫的詳細資訊。此處不再贅述這些詳細資訊，工作流程範例中使用的每個 API 呼叫僅包含您在文件頁面中找到該呼叫所需的資訊。找到特定 API 呼叫後，您可以檢閱該呼叫的完整詳細資訊，包括輸入參數、輸出格式、HTTP 狀態代碼和請求處理類型。
@@ -31,6 +32,7 @@ ONTAP Select 線上文件頁面包含每個 REST API 呼叫的詳細資訊。此
 
 
 
+[[construct-a-url-to-directly-access-the-rest-api]]
 == 建立一個 URL 以直接存取 REST API
 
 除了 ONTAP Select 文件頁面之外，您還可以透過 Python 等程式語言直接存取 Deploy REST API。在這種情況下，核心 URL 與存取線上文件頁面時使用的 URL 略有不同。直接存取 API 時，必須在網域名稱和連接埠字串後附加 /api。例如：

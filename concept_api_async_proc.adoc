@@ -18,6 +18,7 @@ summary: 某些部署 API 調用，特別是建立或修改資源的調用，可
 
 
 
+[[asynchronous-requests-described-using-job-object]]
 == 使用 Job 物件描述的非同步請求
 
 在進行非同步執行的 API 呼叫後，HTTP 回應代碼 202 表示請求已成功驗證並被接受，但尚未完成。此請求會作為背景工作進行處理，在向用戶端發出初始 HTTP 回應後仍會繼續執行。回應中包含錨定該請求的 Job 物件，以及其唯一識別碼。
@@ -27,6 +28,7 @@ NOTE: 您應該參考 ONTAP Select Deploy 線上文件頁面，以確定哪些 A
 
 
 
+[[query-the-job-object-associated-with-an-api-request]]
 == 查詢與 API 請求相關聯的 Job 物件
 
 HTTP 回應中傳回的 Job 物件包含多個屬性。您可以查詢 state 屬性來決定請求是否成功完成。Job 物件可以處於以下狀態之一：
@@ -55,6 +57,7 @@ TIP: 您應該一律使用長輪詢，以減少 Deploy 虛擬機器的工作負�
 
 
 
+[[general-procedure-for-issuing-an-asynchronous-request]]
 == 發出非同步請求的一般程序
 
 您可以使用下列高階程序來完成非同步 API 呼叫：

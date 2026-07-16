@@ -18,6 +18,7 @@ summary: 在規劃安裝 ONTAP Select Deploy 管理實用程式時，應考慮�
 
 
 
+[[pairing-the-deploy-utility-with-the-ontap-select-clusters]]
 == 將 Deploy 實用程式與 ONTAP Select 叢集配對
 
 將 Deploy 公用程式執行個體與 ONTAP Select 叢集配對時,您有多種選擇。
@@ -36,6 +37,7 @@ NOTE: Deploy 實用程式的一個執行個體最多可以管理 400 個 ONTAP S
 
 
 
+[[requirements-related-to-the-kvm-environment]]
 == 與 KVM 環境相關的要求
 
 在 KVM Hypervisor 環境中安裝 Deploy 管理公用程式之前，您應該先檢閱基本需求並準備部署作業。
@@ -70,6 +72,7 @@ ONTAP Select Deploy 僅支援 IP 版本 4（IPv4）。不支援 IP 版本 6（IP
 
 
 
+[[required-configuration-information]]
 == 所需組態資訊
 
 作為部署計劃的一部分，您應該在安裝 ONTAP Select Deploy 管理實用程式之前確定所需的組態資訊。
@@ -88,6 +91,7 @@ Deploy VM 所連接的網路。
 
 
 
+[[optional-network-configuration-information]]
 == 選用的網路組態資訊
 
 Deploy VM 預設使用 DHCP 進行設定。但是，如有需要，您可以手動設定 VM 的網路介面。
@@ -115,6 +119,7 @@ Deploy VM 預設使用 DHCP 進行設定。但是，如有需要，您可以手�
 
 
 
+[[authentication-using-the-credential-store]]
 == 使用認證存放區進行驗證
 
 ONTAP Select Deploy 憑證儲存庫是一個保存帳戶資訊的資料庫。Deploy 使用這些帳戶憑證在叢集建立和管理過程中執行主機驗證。在規劃 ONTAP Select 部署時，您應該了解憑證儲存庫的使用方式。

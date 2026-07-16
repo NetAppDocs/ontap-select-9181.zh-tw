@@ -18,12 +18,14 @@ Representational State Transfer（REST）是一種用於建立分散式 Web 應�
 
 
 
+[[architecture-and-classic-constraints]]
 == 架構與傳統限制
 
 REST 由 Roy Fielding 在 2000 年於 UC Irvine 攻讀博士學位 https://www.ics.uci.edu/~fielding/pubs/dissertation/top.htm["論文"]期間正式提出。它透過一系列約束定義了一種架構風格，這些約束共同改進了基於 Web 的應用程式及其底層協定。這些約束建立了一種基於客戶端/伺服器架構並使用無狀態通訊協定的 RESTful Web 服務應用程式。
 
 
 
+[[resources-and-state-representation]]
 == 資源和狀態表示法
 
 資源是網路型系統的基本元件。建立 REST Web 服務應用程式時，早期設計工作包括：
@@ -36,12 +38,14 @@ REST 由 Roy Fielding 在 2000 年於 UC Irvine 攻讀博士學位 https://www.i
 
 
 
+[[uri-endpoints]]
 == URI 端點
 
 每個 REST 資源都必須使用定義完善的定址方案進行定義和提供。資源所在和識別的端點使用統一資源識別碼（URI）。URI 提供了一個通用框架，用於為網路中的每個資源建立唯一名稱。統一資源定位器（URL）是一種與 Web 服務搭配使用的 URI 類型，用於識別和存取資源。資源通常以類似於檔案目錄的階層式結構公開。
 
 
 
+[[http-messages]]
 == HTTP 訊息
 
 超文本傳輸協定（HTTP）是 Web 服務用戶端和伺服器用於交換資源請求和回應訊息的協定。在設計 Web 服務應用程式時，HTTP 動詞（例如 GET 和 POST）會被對應到資源和對應的狀態管理操作。
@@ -50,6 +54,7 @@ HTTP 是無狀態的。因此，要將一組相關的請求和回應關聯到一
 
 
 
+[[json-formatting]]
 == JSON 格式化
 
 雖然資訊可以透過多種方式在客戶端和伺服器之間進行結構化和傳輸，但最常用的方式（也是 Deploy REST API 使用的方式）是 JavaScript 物件表示法（JSON）。JSON 是一種行業標準，用於以純文字形式表示簡單的資料結構，並用於傳輸描述資源的狀態資訊。

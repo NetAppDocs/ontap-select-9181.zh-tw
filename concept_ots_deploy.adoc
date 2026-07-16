@@ -18,6 +18,7 @@ ONTAP Select Deploy 是用於部署和管理 ONTAP Select 叢集的管理實用�
 
 
 
+[[core-functionality]]
 == 核心功能
 
 Deploy 管理公用程式執行以下核心功能：
@@ -33,18 +34,21 @@ Deploy 管理公用程式執行以下核心功能：
 
 
 
+[[ways-you-can-access-the-deploy-utility]]
 == 您可以存取 Deploy 公用程式的方式
 
 存取 Deploy 管理實用程式時，您有多種選項可供選擇。所有外部介面的功能都相同。您應該選擇最符合您特定部署目標和要求的存取選項。無論選擇哪種方式，您都必須使用管理員帳戶和有效密碼登入。
 
 
 
+[[web-graphical-user-interface]]
 === Web 圖形使用者介面
 
 您可以透過現代網頁瀏覽器存取 Deploy 公用程式。Web 使用者介面提供直覺易用的介面，在大多數情況下，它將是您使用該公用程式的主要介面。
 
 
 
+[[command-line-interface]]
 === 命令列介面
 
 管理 shell 提供基於文字的命令列介面。您可以透過以下方式存取 CLI 管理 shell：
@@ -57,6 +61,7 @@ Deploy 管理公用程式執行以下核心功能：
 
 
 
+[[rest-web-services-api]]
 === REST Web 服務 API
 
 向外部用戶端公開的 REST Web 服務 API 為連接到 Deploy 公用程式提供了另一種選擇。您可以使用任何支援 REST Web 服務的主流程式語言或工具存取該 API。常用的語言包括：
@@ -70,6 +75,7 @@ Deploy 管理公用程式執行以下核心功能：
 
 
 
+[[ontap-select-online-documentation-web-page]]
 === ONTAP Select 線上文件網頁
 
 在 Deploy 公用程式中顯示線上文件網頁是存取 REST Web 服務 API 的另一種方式。但是，您無需使用程式語言，而是透過瀏覽器存取該頁面來存取管理 API。提供以下功能：

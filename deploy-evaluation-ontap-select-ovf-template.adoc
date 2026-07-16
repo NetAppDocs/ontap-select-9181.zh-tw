@@ -26,6 +26,7 @@ summary: 您可以部署單一節點 ONTAP Select 叢集的 90 天評估執行�
 
 
 
+[[step-1-prepare-the-ontap-select-cluster-host]]
 == 步驟 1：準備 ONTAP Select 叢集主機
 
 請依照下列要求準備部署 ONTAP Select 叢集的 ESXi 主機。平台描述基於標準或小型執行個體類型組態，並配備使用 VMFS-5 或 VMFS-6 檔案系統格式化的本機直連儲存設備（DAS）。
@@ -36,6 +37,7 @@ image:prepare_ESXi_host_requirements.png["準備 ESXi 主機的需求"]
 
 
 
+[[step-2-deploy-a-single-node-ontap-select-cluster-using-an-ovf-template]]
 == 步驟 2：使用 OVF 範本部署單節點 ONTAP Select 叢集
 
 在支援的 64 位元 ESXi 主機伺服器上完成下列步驟。

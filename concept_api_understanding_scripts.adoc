@@ -18,6 +18,7 @@ summary: 範例 Python 指令碼可讓您執行多種不同的工作。在即時
 
 
 
+[[common-design-characteristics]]
 == 常見設計特性
 
 這些指令碼的設計具有下列共同特性：
@@ -30,6 +31,7 @@ summary: 範例 Python 指令碼可讓您執行多種不同的工作。在即時
 
 
 
+[[create-a-cluster]]
 == 建立叢集
 
 您可以使用 cluster.py 指令碼建立 ONTAP Select 叢集。根據 CLI 參數和 JSON 輸入檔案的內容、您可以修改指令碼以適應部署環境、如下所示：
@@ -49,6 +51,7 @@ summary: 範例 Python 指令碼可讓您執行多種不同的工作。在即時
 
 
 
+[[add-a-node-license]]
 == 新增節點授權
 
 如果您選擇部署正式作業叢集、則必須使用指令碼 _add_license.py_ 為每個節點新增授權。您可以在部署叢集之前或之後新增授權。
@@ -64,6 +67,7 @@ summary: 範例 Python 指令碼可讓您執行多種不同的工作。在即時
 
 
 
+[[delete-a-cluster]]
 == 刪除叢集
 
 您可以使用腳本 _delete_cluster.py_ 刪除現有的 ONTAP Select 叢集。

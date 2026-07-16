@@ -24,6 +24,7 @@ NOTE: 您只能新增版本早於 Deploy 公用程式執行個體所含原始版
 
 
 
+[[step-1-download-the-install-image]]
 == 步驟 1：下載安裝映像
 
 若要開始將 ONTAP Select 映像新增至 Deploy 公用程式執行個體的程序，您必須從 NetApp 支援網站下載安裝映像。ONTAP Select 安裝映像的格式為單一壓縮檔案。
@@ -38,6 +39,7 @@ NOTE: 您只能新增版本早於 Deploy 公用程式執行個體所含原始版
 
 
 
+[[step-2-upload-the-install-image-to-deploy]]
 == 步驟 2：將安裝映像上傳至 Deploy
 
 取得 ONTAP Select 安裝映像後，必須將該檔案上傳到部署虛擬機器。
@@ -67,6 +69,7 @@ exit
 
 
 
+[[step-3-add-the-install-image]]
 == 步驟 3：新增安裝映像
 
 將 ONTAP Select 安裝映像新增至 Deploy 映像目錄，以便在部署新叢集時可以使用。
@@ -90,6 +93,7 @@ shell bash
 
 
 
+[[step-4-display-the-available-install-images]]
 == 步驟 4：顯示可用的安裝映像
 
 顯示部署新叢集時可用的 ONTAP Select 映像。

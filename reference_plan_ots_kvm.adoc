@@ -18,6 +18,7 @@ summary: 使用 KVM Hypervisor 時，有幾個規劃問題需要考慮。
 
 
 
+[[basic-requirements-and-restrictions]]
 == 基本要求和限制
 
 如果使用外部陣列作為 ONTAP Select 儲存池，則適用下列組態限制：
@@ -33,6 +34,7 @@ CAUTION: 您指定的儲存容量必須在外部儲存裝置的允許儲存容�
 
 
 
+[[best-practices]]
 == 最佳實務
 
 您應該遵循以下最佳實務做法：

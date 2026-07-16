@@ -18,6 +18,7 @@ summary: 在規劃 ONTAP Select 部署時，您應該考慮以下幾個一般性
 
 
 
+[[required-linux-knowledge-and-skills-for-kvm]]
 == KVM 所需的 Linux 知識與技能
 
 使用 KVM 虛擬機器管理程式的 Linux 環境較為複雜。在 KVM 上部署 ONTAP Select 之前，您必須具備必要的知識和技能。
@@ -61,6 +62,7 @@ KVM 部署與管理:: 您應該熟悉基本的虛擬化概念。此外，在 KVM
 
 
 
+[[cluster-size-and-related-considerations]]
 == 叢集大小及相關考量
 
 您應該考慮與叢集大小相關的幾個規劃問題。
@@ -71,6 +73,7 @@ KVM 部署與管理:: 您應該熟悉基本的虛擬化概念。此外，在 KVM
 
 
 
+[[hypervisor-host-considerations]]
 == Hypervisor 主機考量事項
 
 您應該考慮與 hypervisor 主機相關的幾個規劃問題。
@@ -124,6 +127,7 @@ ONTAP Select 節點的 Hypervisor 和管理公用程式:: Deploy 管理實用程
 
 
 
+[[storage-considerations]]
 == 儲存考量
 
 您應該考慮與主機儲存相關的幾個規劃問題。
@@ -156,6 +160,7 @@ NOTE: ONTAP Select 儲存容量對應於連接到 ONTAP Select 虛擬機器的�
 
 
 
+[[authentication-using-the-credential-store]]
 == 使用認證存放區進行驗證
 
 ONTAP Select Deploy 憑證儲存庫是一個保存帳戶資訊的資料庫。Deploy 使用這些帳戶憑證在叢集建立和管理過程中執行主機驗證。在規劃 ONTAP Select 部署時，您應該了解憑證儲存庫的使用方式。

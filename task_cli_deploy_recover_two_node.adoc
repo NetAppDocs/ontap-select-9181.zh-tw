@@ -18,6 +18,7 @@ summary: 如果 ONTAP Select Deploy 公用程式發生故障或因某種原因�
 
 
 
+[[prepare-to-recover-the-deploy-utility]]
 == 準備恢復 Deploy 公用程式
 
 在嘗試還原 Deploy 公用程式執行個體之前，您需要做好準備以確保成功。您必須熟悉若干管理程序並擁有所需資訊。
@@ -51,6 +52,8 @@ link:task_cli_migrate_deploy.html#step-3-restore-the-deploy-configuration-data-t
 
 
 
+[[restore-a-deploy-utility-instance-using-a-configuration-backup]]
+[[restore-deploy-backup]]
 == 使用組態備份還原 Deploy 公用程式執行個體
 
 如果您有包含雙節點叢集的故障 Deploy 公用程式執行個體的備份，則可以將組態資料還原到新的 Deploy 虛擬機器執行個體。然後，您必須透過對 ONTAP Select 叢集中的兩個節點執行其他組態來完成還原。
@@ -127,6 +130,8 @@ storage failover show
 
 
 
+[[reconfigure-and-recover-a-deploy-utility-instance]]
+[[restore-and-recover-deploy]]
 == 重新設定並還原 Deploy 實用程式執行個體
 
 如果您沒有包含雙節點叢集的故障 Deploy 公用程式執行個體的備份，請在新的 Deploy 虛擬機器中設定 mediator iSCSI 目標和 mailbox。然後，透過對 ONTAP Select 叢集中的兩個節點進行其他組態設定來完成還原。

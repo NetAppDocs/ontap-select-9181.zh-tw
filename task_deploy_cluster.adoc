@@ -23,6 +23,8 @@ TIP: 您還可以link:https://docs.netapp.com/us-en/ontap-select/task_cli_deploy
 
 
 
+[[step-1-prepare-for-the-deployment]]
+[[prepare-for-deploy]]
 == 步驟 1：準備部署
 
 做好部署準備，確保部署成功。
@@ -87,6 +89,8 @@ NOTE: 您可以透過選擇頁面頂部的標籤 (Clusters、Hypervisor Hosts、
 
 
 
+[[step-2-create-a-single-node-or-multi-node-cluster]]
+[[create-single-or-multi-node-cluster]]
 == 步驟 2：建立單節點或多節點叢集
 
 您可以使用 ONTAP Select Deploy Web 使用者介面來部署單節點或多節點 ONTAP Select 叢集。
@@ -196,6 +200,7 @@ NOTE: 您可以透過選擇頁面頂部的標籤 (Clusters、Hypervisor Hosts、
 ====
 
 
+[[step-3-complete-the-deployment]]
 == 步驟 3：完成部署
 
 部署叢集之後、link:https://docs.netapp.com/us-en/ontap/system-admin/setup-autosupport-task.html["確認 ONTAP Select AutoSupport 功能已配置"^]然後link:task_cli_clusters.html["備份 ONTAP Select Deploy 組態資料"]。

@@ -18,6 +18,7 @@ summary: 您應該考慮與 VMware 環境相關的幾個硬體需求和規劃問
 
 
 
+[[hypervisor-requirements]]
 == Hypervisor 需求
 
 ONTAP Select 運作所依賴的 Hypervisor 有幾項相關要求。
@@ -27,12 +28,14 @@ NOTE: 您應檢閱 link:reference_release_notes.html["ONTAP Select 發行說明"
 
 
 
+[[vmware-licensing]]
 === VMware 授權
 
 若要部署 ONTAP Select 叢集，您的組織必須擁有適用於執行 ONTAP Select 的 Hypervisor 主機的有效 VMware vSphere 授權。您應該使用適合您部署環境的授權。
 
 
 
+[[software-compatibility]]
 === 軟體相容性
 
 您可以在 KVM 和 ESXi Hypervisor 上部署 ONTAP Select。
@@ -69,12 +72,14 @@ NOTE: ESXi 7.0 GA 已停止提供服務。如果您有使用此版本的 ONTAP S
 ====
 
 
+[[vmware-vcenter-and-standalone-esxi-hosts]]
 === VMware vCenter 和獨立 ESXi 主機
 
 如果 ESXi Hypervisor 主機由 vCenter 伺服器管理，則必須使用 vCenter 認證將該主機註冊至 Deploy 管理公用程式。您不能使用 ESXi 認證將該主機註冊為獨立主機。
 
 
 
+[[core-hardware-requirements]]
 == 核心硬體需求
 
 部署 ONTAP Select 的實體 Hypervisor 主機必須符合多項硬體需求。您可以選擇任何平台作為 Hypervisor 主機，只要它符合最低硬體需求即可。以下供應商提供支援的硬體平台：Cisco、Dell、HP、Fujitsu、Lenovo 和 Supermicro。
@@ -86,6 +91,7 @@ NOTE: 從 ONTAP Select 9.9.1 開始，僅支援基於 Intel Xeon Sandy Bridge �
 
 
 
+[[basic-hardware-requirements]]
 === 基本硬體需求
 
 無論節點執行個體類型或授權方案為何，所有平台都適用數個通用的硬體需求。
@@ -114,6 +120,7 @@ NOTE: ONTAP Select 不支援 Advanced Micro Devices（AMD）處理器。
 |===
 
 
+[[additional-hardware-requirements-based-on-the-instance-type]]
 === 根據執行個體類型而定的其他硬體需求
 
 根據節點執行個體類型，還有一些額外的硬體需求。

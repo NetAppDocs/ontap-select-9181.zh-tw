@@ -29,6 +29,7 @@ Deploy 有一些特定的程序（例如變更管理員密碼）。
 
 
 
+[[administer-ontap-select]]
 == 管理 ONTAP Select
 
 為了支援 ONTAP Select，提供了許多不同的管理流程。此外，還有一些專門針對 Deploy 管理實用程式的流程。以下介紹其中最重要的流程。通常，所有流程都使用 Deploy Web 使用者介面。
@@ -38,6 +39,7 @@ NOTE: 您也可以link:https://docs.netapp.com/us-en/ontap-select/task_cli_signi
 
 
 
+[[perform-additional-ontap-configuration]]
 == 執行其他 ONTAP 組態
 
 部署 ONTAP Select 叢集之後、您可以像設定硬體型 ONTAP 系統一樣設定及管理叢集。例如、您可以使用 ONTAP System Manager 或 ONTAP CLI 來設定 ONTAP Select 叢集。

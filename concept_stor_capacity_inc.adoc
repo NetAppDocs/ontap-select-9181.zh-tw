@@ -54,6 +54,7 @@ image:ST_07.jpg["容量分配：節點 1 兩次額外儲存新增作業後的分
 
 
 
+[[increase-capacity-for-ontap-select-with-software-raid]]
 == 使用軟體 RAID 增加 ONTAP Select 的容量
 
 同樣，儲存新增精靈也可用於增加使用軟體 RAID 的 ONTAP Select 節點的管理容量。此精靈僅顯示可用且可對應為 RDM 到 ONTAP Select 虛擬機器的 DAS SSD 磁碟機。

@@ -38,6 +38,7 @@ summary: 如果您想在決定購買前評估 ONTAP Select，可以使用評估�
 
 
 
+[[licensing-characteristics]]
 == 授權特性
 
 ONTAP Select 評估授權具有以下特性：
@@ -53,6 +54,7 @@ ONTAP Select 評估授權具有以下特性：
 
 
 
+[[upgrade-to-a-production-license]]
 == 升級至正式作業授權
 
 您可以將 ONTAP Select 評估叢集升級為使用正式作業授權。您應該注意下列限制：

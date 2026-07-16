@@ -21,6 +21,7 @@ NOTE: ONTAP Select 資料 Aggregate 設定為使用 RAID 0，因為實體 RAID �
 
 
 
+[[raid-controller-configuration-for-local-attached-storage]]
 == 本機附加儲存設備的 RAID 控制器組態
 
 所有為 ONTAP Select 提供後備儲存的本機連線磁碟都必須位於 RAID 控制器之後。大多數通用伺服器都提供多種價位的 RAID 控制器選項，每種選項的功能等級各不相同。我們的目標是盡可能支援所有這些選項，前提是它們滿足控制器的最低要求。
@@ -46,6 +47,7 @@ NOTE: 舊版 ESXi 的最大範圍和資料存放區大小為 64TB，這可能會
 
 
 
+[[raid-mode]]
 == RAID 模式
 
 許多 RAID 控制器支援多達三種作業模式，每種模式都代表寫入要求所採用的資料路徑有顯著差異。這三種模式如下：
@@ -61,6 +63,7 @@ ONTAP Select 需要配備電池備援或快閃記憶體單元；因此，我們�
 
 
 
+[[local-disks-shared-between-ontap-select-and-os]]
 == ONTAP Select 與作業系統之間共用的本機磁碟
 
 最常見的伺服器組態是所有本機連接的主軸都位於單一 RAID 控制器之後。您至少應該配置兩個 LUN：一個用於 Hypervisor、一個用於 ONTAP Select VM。
@@ -77,6 +80,7 @@ image:ST_08.jpg["伺服器 LUN 組態僅包含 RAID 管理的磁碟"]
 
 
 
+[[local-disks-split-between-ontap-select-and-os]]
 == 本機磁碟在 ONTAP Select 和 OS 之間分配
 
 伺服器廠商提供的另一種可能組態是使用多個 RAID 或磁碟控制器來設定系統。在此組態中,一組磁碟由一個磁碟控制器管理,該控制器可能提供或可能不提供 RAID 服務。第二組磁碟由能夠提供 RAID 5/6 服務的硬體 RAID 控制器管理。
@@ -91,12 +95,14 @@ image:ST_09.jpg["混合 RAID／非 RAID 系統上的伺服器 LUN 組態"]
 
 
 
+[[multiple-luns]]
 == 多個 LUN
 
 在兩種情況下，單一 RAID 群組 / 單一 LUN 組態必須變更。使用 NL-SAS 或 SATA 磁碟機時，RAID 群組大小不得超過 12 個磁碟機。此外，單一 LUN 可能會大於基礎 Hypervisor 儲存限制（個別檔案系統範圍大小上限或儲存資源池大小總計上限）。然後，必須將基礎實體儲存設備分割成多個 LUN，才能成功建立檔案系統。
 
 
 
+[[vmware-vsphere-virtual-machine-file-system-limits]]
 == VMware vSphere 虛擬機器檔案系統限制
 
 某些版本的 ESXi 上資料存放區的最大大小為 64TB 。
@@ -126,6 +132,7 @@ VMware 不支援從 VMFS 5 直接升級到 VMFS 6。因此，儲存 vMotion 是�
 
 
 
+[[ontap-select-virtual-disks]]
 == ONTAP Select 虛擬磁碟
 
 ONTAP Select 的核心在於向 ONTAP 提供一組從一個或多個儲存池配置的虛擬磁碟。ONTAP 將這些虛擬磁碟視為實體磁碟，而儲存堆疊的其餘部分則由虛擬機器管理程式抽象化。下圖更詳細地展示了這種關係，重點突出了實體 RAID 控制器、虛擬機器管理程式和 ONTAP Select 虛擬機器之間的關係。
@@ -141,6 +148,7 @@ image:ST_12.jpg["虛擬磁碟到實體磁碟的對應"]
 
 
 
+[[virtual-disk-provisioning]]
 == 虛擬磁碟資源配置
 
 為了提供更流暢的使用者體驗，ONTAP Select 管理工具 ONTAP Deploy 會自動從關聯的儲存池配置虛擬磁碟，並將其附加到 ONTAP Select VM。此操作在初始設定和新增儲存操作期間都會自動執行。如果 ONTAP Select 節點是 HA 配對的一部分，則虛擬磁碟會自動指派給本機儲存池和鏡像儲存池。
@@ -154,6 +162,7 @@ NOTE: 在 ONTAP Select 虛擬機器中新增容量可能會導致產生大小不
 
 
 
+[[virtualized-nvram]]
 == 虛擬化 NVRAM
 
 NetApp FAS 系統通常配備一塊實體 NVRAM PCI 卡，這是一種高效能卡，內建非揮發性快閃記憶體。該卡使 ONTAP 能夠立即向用戶端確認收到的寫入操作，從而顯著提升寫入效能。它還可以安排將修改後的資料區塊移回速度較慢的儲存媒體，這一過程稱為 destaging。
@@ -164,6 +173,7 @@ NVRAM 被放置在獨立的 VMDK 中。將 NVRAM 分割到單獨的 VMDK 中，�
 
 
 
+[[data-path-explained-nvram-and-raid-controller]]
 == 資料路徑詳解：NVRAM 與 RAID 控制器
 
 要了解虛擬化 NVRAM 系統分區與 RAID 控制器之間的交互，最好的方法是分析寫入要求進入系統時所經過的資料路徑。

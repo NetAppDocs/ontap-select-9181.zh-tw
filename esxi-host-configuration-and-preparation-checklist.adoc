@@ -21,6 +21,7 @@ NOTE: ONTAP Select Deploy 管理公用程式不會執行虛擬機器管理程式
 
 
 
+[[step-1-prepare-the-esxi-hypervisor-host]]
 == 步驟 1：準備 ESXi Hypervisor 主機
 
 驗證 ESXi 主機和防火牆連接埠的組態。
@@ -63,6 +64,7 @@ NetApp 建議您開啟以下防火牆連接埠以允許存取 vSphere：
 
 
 
+[[step-2-review-the-ontap-select-cluster-configuration]]
 == 步驟 2：檢閱 ONTAP Select 叢集組態
 
 您可以將 ONTAP Select 部署為多節點叢集或單節點叢集。在許多情況下，多節點叢集更為理想，因為它具有額外的儲存容量和高可用性（ HA ）功能。

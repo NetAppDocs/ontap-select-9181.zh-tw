@@ -18,6 +18,7 @@ summary: 作為管理 ONTAP Select 授權的一部分，您可以執行幾項相
 
 
 
+[[manage-the-capacity-tier-licenses]]
 == 管理 Capacity Tier 授權
 
 您可以根據需要新增、編輯和刪除 ONTAP Select Capacity Tier 授權。
@@ -33,6 +34,7 @@ summary: 作為管理 ONTAP Select 授權的一部分，您可以執行幾項相
 
 
 
+[[manage-the-capacity-pool-licenses]]
 == 管理 Capacity Pool 授權
 
 您可以根據需要新增、編輯和刪除 ONTAP Select Capacity Pool 授權。
@@ -81,6 +83,7 @@ summary: 作為管理 ONTAP Select 授權的一部分，您可以執行幾項相
 
 
 
+[[reinstall-a-capacity-pool-license]]
 == 重新安裝 Capacity Pool 授權
 
 每個有效的 Capacity Pool 授權都鎖定到特定的 License Manager 執行個體，該執行個體包含在 Deploy 管理公用程式的執行個體中。如果您正在使用 Capacity Pool 授權，然後還原或復原 Deploy 執行個體，則原始授權將不再有效。您必須產生新的容量授權檔案，然後將授權安裝到新的 Deploy 執行個體。
@@ -145,6 +148,8 @@ summary: 作為管理 ONTAP Select 授權的一部分，您可以執行幾項相
 
 
 
+[[convert-an-evaluation-license-to-a-production-license]]
+[[convert-license]]
 == 將評估授權轉換為正式授權
 
 您可以使用 Deploy 管理公用程式將 ONTAP Select 評估叢集升級到使用正式版 Capacity Tier 授權。
@@ -176,6 +181,7 @@ summary: 作為管理 ONTAP Select 授權的一部分，您可以執行幾項相
 
 
 
+[[manage-an-expired-capacity-pool-license]]
 == 管理已過期的 Capacity Pool 授權
 
 通常情況下，授權過期後不會發生任何事情。但是，由於節點與已過期的授權關聯，因此您無法安裝其他授權。在續訂授權之前，您不應執行任何會導致 Aggregate 離線的操作，例如重新開機或容錯移轉作業。建議您盡快續訂授權。
@@ -184,6 +190,7 @@ summary: 作為管理 ONTAP Select 授權的一部分，您可以執行幾項相
 
 
 
+[[manage-add-on-licenses]]
 == 管理附加授權
 
 對於 ONTAP Select 產品，附加授權直接在 ONTAP 中套用，而不是透過 ONTAP Select Deploy 進行管理。如需詳細資訊，請參閱link:https://docs.netapp.com/us-en/ontap/system-admin/manage-licenses-concept.html["管理授權總覽（僅限叢集管理員）"^]和link:https://docs.netapp.com/us-en/ontap/task_admin_enable_new_features.html["新增授權金鑰即可啟用新功能"^]。

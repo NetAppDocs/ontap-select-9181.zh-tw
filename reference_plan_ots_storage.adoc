@@ -21,6 +21,7 @@ NOTE: 本文概述了 ESXi 和 KVM 主機的外部儲存支援資訊。如需更
 
 
 
+[[hardware-raid-controller-requirements]]
 == 硬體 RAID 控制器需求
 
 部署 ONTAP Select 的虛擬機器管理程式主機上的 RAID 控制器必須符合幾個要求。
@@ -53,12 +54,14 @@ RAID 控制器的最低要求包括：
 
 
 
+[[software-raid-requirements]]
 == 軟體 RAID 需求
 
 在虛擬機器管理程式上部署 ONTAP Select 叢集時，您可以使用 ONTAP Select 提供的軟體 RAID 功能，而非本機硬體 RAID 控制器。在使用軟體 RAID 部署叢集之前，請查看以下要求和限制。
 
 
 
+[[general-requirements]]
 === 一般要求
 
 軟體 RAID 部署環境必須符合以下核心要求：
@@ -75,6 +78,7 @@ NOTE: 如果存在硬體 RAID 控制器，請參閱 link:concept_stor_concepts_c
 
 
 
+[[esxi-specific-requirements]]
 === ESXi 特定需求
 
 * VMware ESXi 8.0 GA（組建 20513097）或更新版本
@@ -84,6 +88,7 @@ NOTE: 如果存在硬體 RAID 控制器，請參閱 link:concept_stor_concepts_c
 
 
 
+[[kvm-specific-requirements]]
 === KVM 特定需求
 
 此外，軟體套件配置也有特定要求。請參閱 link:https://docs.netapp.com/us-en/ontap-select/kvm-host-configuration-and-preparation-checklist.html#prepare-linux-server["Linux 伺服器的準備工作"] 步驟以了解更多資訊。
@@ -120,6 +125,7 @@ KVM 的媒體期望:: 所使用的 SSD 快閃儲存設備必須符合以下附�
 
 
 
+[[ontap-select-node-configuration]]
 === ONTAP Select 節點組態
 
 您必須如下設定每個 ONTAP Select 節點和 Hypervisor 主機，以將系統磁碟與根 Aggregate 和資料 Aggregate 分開：
@@ -130,6 +136,7 @@ KVM 的媒體期望:: 所使用的 SSD 快閃儲存設備必須符合以下附�
 
 
 
+[[storage-capacity-restrictions]]
 == 儲存容量限制
 
 在規劃 ONTAP Select 部署時，您應該了解與儲存分配和使用相關的限制。
@@ -141,12 +148,14 @@ TIP: ONTAP Select 對儲存分配和使用實施了多項限制。在部署 ONTA
 
 
 
+[[calculate-raw-storage-capacity]]
 === 計算原始儲存容量
 
 ONTAP Select 儲存容量對應於連接到 ONTAP Select 虛擬機器的虛擬資料磁碟和根磁碟的總允許大小。分配容量時應考慮此因素。
 
 
 
+[[minimum-storage-capacity-for-a-single-node-cluster]]
 === 單節點叢集的最小儲存容量
 
 單節點叢集中分配給節點的儲存資源池最小大小為：
@@ -159,6 +168,7 @@ ONTAP Select 儲存容量對應於連接到 ONTAP Select 虛擬機器的虛擬�
 
 
 
+[[minimum-storage-capacity-for-a-multi-node-cluster]]
 === 多節點叢集的最小儲存容量
 
 多節點叢集中每個節點分配的儲存資源池最小大小為：
@@ -180,6 +190,7 @@ HA 配對中的每個節點都必須具有相同的儲存容量。
 ====
 
 
+[[storage-capacity-and-multiple-storage-pools]]
 === 儲存容量和多個儲存資源池
 
 使用本機直連儲存設備、VMware vSAN 或外部儲存陣列時，您可以將每個 ONTAP Select 節點設定為使用高達 400 TB 的儲存設備。但是，在使用直連儲存設備或外部儲存陣列時，單一儲存資源池的大小上限為 64 TB。因此，如果您打算在這些情況下使用超過 64 TB 的儲存設備，則必須配置多個儲存資源池，如下所示：
@@ -193,12 +204,14 @@ NOTE: 每個儲存池中都預留了 2% 的緩衝區，無需容量授權。除�
 
 
 
+[[storage-capacity-and-vmware-vsan]]
 === 儲存容量和 VMware vSAN
 
 使用 VMware vSAN 時，資料儲存容量可以大於 64 TB。但是，在建立 ONTAP Select 叢集時，初始分配容量上限為 64 TB。叢集建立完成後，您可以從現有的 vSAN 資料儲存中指派額外的儲存空間。ONTAP Select 可使用的 vSAN 資料儲存容量取決於虛擬機器儲存策略的設定。
 
 
 
+[[best-practices]]
 === 最佳實務
 
 關於 Hypervisor 核心硬體，您應該考慮以下建議：
@@ -208,6 +221,7 @@ NOTE: 每個儲存池中都預留了 2% 的緩衝區，無需容量授權。除�
 
 
 
+[[additional-disk-drive-requirements-based-on-the-platform-license]]
 == 根據平台授權的其他磁碟機需求
 
 您選擇的磁碟機會根據平台授權方案而受到限制。
@@ -235,6 +249,7 @@ NOTE: 進階授權（僅限 SSD）和進階 XL 授權（SSD 或 NVMe）支援使
 
 
 
+[[nvme-drives-with-software-raid]]
 == 採用軟體 RAID 的 NVMe 磁碟機
 
 您可以設定軟體 RAID 以使用 NVMe SSD 磁碟機。您的環境必須符合以下要求：

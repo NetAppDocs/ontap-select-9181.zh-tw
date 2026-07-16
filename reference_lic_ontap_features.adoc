@@ -21,6 +21,8 @@ NOTE: ONTAP Select 通常不支援具有硬體特定相依性的 ONTAP 功能。
 
 
 
+[[ontap-features-automatically-enabled-by-default]]
+[[enabled-ontap-features]]
 == ONTAP 功能預設自動啟用
 
 ONTAP Select 支援以下 ONTAP 功能，並且預設已取得授權：
@@ -62,6 +64,7 @@ ONTAP Select 支援 SVM DR 作為來源和目的地，最多支援 16 個關係�
 
 
 
+[[ontap-features-that-are-separately-licensed]]
 == 需要單獨授權的 ONTAP 功能
 
 對於任何未預設啟用的 ONTAP 功能、您需要單獨購買授權、包括：

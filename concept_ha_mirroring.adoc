@@ -18,6 +18,7 @@ summary: '使用 RAID SyncMirror (RSM)、鏡像 Aggregate 和寫入路徑防止�
 
 
 
+[[synchronous-replication]]
 == 同步複寫
 
 ONTAP HA 模型是基於 HA 合作夥伴的概念建構。ONTAP Select 將此架構擴展到非共享的通用伺服器領域，它利用 ONTAP 中存在的 RAID SyncMirror (RSM) 功能在叢集節點之間複製資料區塊，從而在 HA 對中提供兩份使用者資料副本。
@@ -26,6 +27,7 @@ ONTAP HA 模型是基於 HA 合作夥伴的概念建構。ONTAP Select 將此架
 
 
 
+[[mirrored-aggregates]]
 == 鏡射 Aggregate
 
 ONTAP Select 叢集由 2 到 12 個節點組成。每個高可用性（HA）配對包含兩份使用者資料副本，透過 IP 網路在節點間同步鏡像。這種鏡像對使用者而言是透明的，它是資料 Aggregate 的屬性，在資料 Aggregate 建立過程中自動設定。
@@ -54,6 +56,7 @@ NOTE: 部署 ONTAP Select 叢集時，系統上的所有虛擬磁碟都會自動
 
 
 
+[[write-path]]
 == 寫入路徑
 
 叢集節點之間資料區塊的同步鏡像、以及系統故障時不遺失資料的要求、對於傳入寫入作業在 ONTAP Select 叢集中傳播時所採取的路徑有重大影響。此程序包含兩個階段：

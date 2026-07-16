@@ -21,12 +21,14 @@ NOTE: 您還需要管理部署 ONTAP Select 之 ESXi 虛擬機器管理程式主
 
 
 
+[[administrative-privileges]]
 == 管理權限
 
 以下列出建立和管理 ONTAP Select 叢集所需的最低管理權限。
 
 
 
+[[datastore]]
 === 資料存放區
 
 * 分配空間
@@ -38,6 +40,7 @@ NOTE: 您還需要管理部署 ONTAP Select 之 ESXi 虛擬機器管理程式主
 
 
 
+[[host]]
 === 主機
 
 組態::
@@ -61,6 +64,7 @@ NOTE: 您還需要管理部署 ONTAP Select 之 ESXi 虛擬機器管理程式主
 
 
 
+[[network]]
 === 網路
 
 * 指派網路
@@ -68,6 +72,7 @@ NOTE: 您還需要管理部署 ONTAP Select 之 ESXi 虛擬機器管理程式主
 
 
 
+[[virtual-machine]]
 === 虛擬機器
 
 組態:: 該類別中的所有權限。
@@ -78,9 +83,10 @@ NOTE: 您還需要管理部署 ONTAP Select 之 ESXi 虛擬機器管理程式主
 
 
 
+[[vapp]]
 === vApp
 
 該類別中的所有權限。
 
 .相關資訊
-link:https://docs.netapp.com/us-en/ontap-select/reference_plan_dep_vmware.html#ontap-select-deploy-vmware-vcenter-server-considerations["瞭解在 vCenter 中用於 vSAN ESA 的 VMware vSphere 權限"]
+link:reference_plan_dep_vmware.html#vmware-vcenter-server-considerations["瞭解在 vCenter 中用於 vSAN ESA 的 VMware vSphere 權限"]

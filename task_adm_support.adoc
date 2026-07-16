@@ -18,6 +18,7 @@ summary: 作為 ONTAP Select 管理的一部分，您可以執行幾個相關的
 
 
 
+[[configure-the-deploy-system]]
 == 配置 Deploy 系統
 
 您應該設定影響 Deploy 公用程式運作方式的基本系統組態參數。
@@ -42,6 +43,7 @@ summary: 作為 ONTAP Select 管理的一部分，您可以執行幾個相關的
 
 
 
+[[display-the-ontap-select-deploy-event-messages]]
 == 顯示 ONTAP Select Deploy 事件訊息
 
 ONTAP Select Deploy 實用程式包含一個事件日誌記錄功能，用於提供有關系統活動的資訊。您應該查看事件日誌的內容，以便調試任何問題，或在技術支援人員的指導下進行查看。
@@ -66,6 +68,7 @@ ONTAP Select Deploy 實用程式包含一個事件日誌記錄功能，用於提
 
 
 
+[[enable-autosupport]]
 == 啟用 AutoSupport
 
 您可以根據需要啟用和停用 AutoSupport 功能。
@@ -82,6 +85,7 @@ AutoSupport 是 NetApp 支援 ONTAP Select 時所使用的主要疑難排解工�
 
 
 
+[[generate-and-download-an-autosupport-package]]
 == 產生並下載 AutoSupport 套件
 
 ONTAP Select 包含產生 AutoSupport 套件的功能。您應該產生套件來偵錯任何問題，或者在技術支援人員的指導下進行操作。

@@ -2299,9 +2299,6 @@
   <block id="4ba59a7efee785c52f70cdae7fca55c3" category="list-text">從 ONTAP Select 9.17.1 開始，vSAN Express Storage Architecture（ESA）的支援範圍擴大到部署多節點叢集。此增強功能可讓您部署 vSAN ESA 組態。</block>
   <block id="a8642b6a7959681743079d45db6cce81" category="paragraph">vSAN ESA 是 ESXi 特有的配置，也是 VMware vSAN 在 vSphere 8 中引入的一種新架構。vSAN ESA 旨在提供更高的效率、可擴展性和效能，尤其是在使用基於 NVMe 的 TLC 快閃記憶體裝置時。</block>
   <block id="5481638e1ad922295838ce542f9aff38" category="paragraph">ONTAP Select Deploy 和 ONTAP Select for ESXi 支援配置 ONTAP Select 單節點和多節點叢集，其儲存資源池可以使用 vSAN 或外部陣列類型的資料存放區。</block>
-  <block id="9f2987dffbb8cc07dc722392ca553e1e" category="paragraph">若要執行內容庫操作，您需要額外的權限等級存取權。如果您在 vSAN ESA 部署中使用受限角色，則必須具備此權限。</block>
-  <block id="6146fd29f571a044684d201d9c796583" category="inline-link-macro">了解內容庫作業的存取權限層級</block>
-  <block id="23add99dd3b98f3716a4830bf3524c6e" category="paragraph"><block ref="0338668b24eba8707cba4da17831f4b6" category="inline-link-macro-rx"></block>。</block>
   <block id="8636e1dc9721a5c30a4e439da7b5f9a1" category="list-text">更新的 NDA 驅動程式支援</block>
   <block id="47a73413b58dd69883b3d5bfcaf3ae17" category="list-text">從 ONTAP Select 9.17.1 開始，FreeBSD NDA（NVMe Direct Access）裝置驅動程式取代了 NVD（NVMe express disk driver）。FreeBSD 驅動程式透過實作 NVMe 命令協定來支援直接存取裝置。部署 ONTAP Select 9.17.1 叢集或將現有 ONTAP Select 叢集升級至 9.17.1 版本時，設定 NVMe 裝置時預設會啟動 FreeBSD 驅動程式。</block>
   <block id="9fe4db073ef9cb1070ea002413806d7b" category="paragraph">對於 ONTAP Select 9.16.1 及更早版本，NVD 將繼續為 ONTAP Select 部署中的 NVMe 裝置提供支援。</block>
@@ -2534,9 +2531,7 @@
   <block id="0322e46fade696f2e31f29923f0e13e7" category="paragraph">Deploy 還必須能夠使用以下傳輸協定與 ONTAP Select 節點和叢集管理 IP 位址通訊：</block>
   <block id="62a5303a3a11fbd7213daedd9ed6e5b5" category="list-text">PING 指令（ICMP）</block>
   <block id="a808fd43c31372cb5ef7ac1ac9224c52" category="list-text">您必須將 IPv4 位址指派給 Deploy 虛擬機器的管理 LIF。</block>
-  <block id="2e4143d0df24451229cbcf21d106b6c5" category="section-title">ONTAP Select Deploy VMware vCenter 伺服器注意事項</block>
   <block id="0cdb970631a712b516a9779c1d127d32" category="section-title">VMware vSphere ESA 的權限</block>
-  <block id="fe2a57ed0ddb8d9b57b737aff59f340b" category="paragraph">以下列出了 vSphere 內容庫在 vCenter 中建立和管理 vSAN Express Storage Architecture（ESA）所需的特定權限：</block>
   <block id="7fda80facd4b5302f2a2c887c2ecb595" category="list-text">新增程式庫項目</block>
   <block id="5ac2b813625b685d2cd86e5bbd2e2259" category="list-text">建立本機程式庫</block>
   <block id="036e7b8c4bda5955184609f09f458e15" category="list-text">刪除程式庫項目</block>
@@ -2919,7 +2914,6 @@
   <block id="89c3bcf0ecc1114f8d19734d9156cb40" category="list-text">資源配置</block>
   <block id="776c22edd71a94b798c726e47a0fce00" category="section-title">vApp</block>
   <block id="ee1aadb3a9fa619eb12db5d1e58032b4" category="inline-link-macro">瞭解在 vCenter 中用於 vSAN ESA 的 VMware vSphere 權限</block>
-  <block id="653a421852b6e9fc7e8da536351d6d57" category="paragraph"><block ref="653a421852b6e9fc7e8da536351d6d57" category="inline-link-macro-rx"></block></block>
   <block id="694d40220902b22c12e6697b843de1d6" category="summary">使用 VMware ESXi 時，您應該考慮幾個相關的規劃問題。</block>
   <block id="324bea2f11169e67c398f52f2473e586" category="doc">VMware ESXi 對 ONTAP Select 的外部儲存需求</block>
   <block id="bcee2262402cb4341eea3a827fc4df93" category="paragraph">ONTAP Select vNAS 是一種解決方案，它允許 ONTAP Select 資料儲存位於運行 ONTAP Select 虛擬機的 ESXi 管理程式主機外部。這些遠端資料儲存可以透過 VMware vSAN 或通用外部儲存陣列進行存取。</block>
@@ -4058,4 +4052,11 @@
   <block id="609570e1a92256aa3f9b774f7dbf24fc" category="paragraph">瞭解 <block ref="4ae01b68125388898638ecb3eb2e59b7" category="inline-link-macro-rx"></block></block>
   <block id="d8818ebf9ca1095fb7a5372f4292243c" category="list-text">從 ONTAP Select 9.17.1 開始，ONTAP Select 支援 SnapMirror cloud。ONTAP Select 預設不提供 SnapMirror cloud 授權。部署 ONTAP Select 9.17.1 叢集或將現有 ONTAP Select 叢集升級至 9.17.1 版本時，您需要申請 SnapMirror cloud 授權。如需更多資訊，請參閱<block ref="721bf771faed6cfbdee5aa217f7b1ff8" category="inline-link-macro-rx"></block>。</block>
   <block id="142f59b080f0f1bf1136c761bdeb20c0" category="list-text">從 ONTAP Select 9.17.1 開始，新部署會自動授權 SnapLock Select（包括防篡改 Snapshot 鎖定）。若要從 ONTAP Select 9.16.1 及更早版本升級，您可以從<block ref="a42716fdd3c80ae75cadfb8024b65de0" category="inline-link-macro-rx"></block>免費下載 SnapLock Select 授權並手動套用。如需更多資訊，請參閱<block ref="c7da6e6f478f90eda131fcbe777888c9" category="inline-link-macro-rx"></block>。</block>
+  <block id="115b70fb63fe464e7cf86f17b11f1d67" category="paragraph">若要執行內容庫操作，您需要存取額外的權限等級。如果您在 vSAN ESA 部署中使用受限角色，則必須擁有此存取權限。</block>
+  <block id="b1689d890e3bfdba864c509e65029ab6" category="inline-link-macro">了解內容庫操作的存取權限級別</block>
+  <block id="420c43a81b06eb199719986301b88739" category="paragraph"><block ref="349cc67b5cd523e4bbe7acd476212356" category="inline-link-macro-rx"></block>。</block>
+  <block id="645dbfc8ae0a73e8087fbcb0a997027f" category="section-title">VMware vCenter 伺服器注意事項</block>
+  <block id="3c877a9561264bd22f7ed715473c9258" category="paragraph">要在 vCenter 中建立和管理 vSAN Express Storage Architecture (ESA)，您需要以下 vSphere 內容庫權限：</block>
+  <block id="913b24f487842d48914e3794480e83cc" category="admonition">要存取內容庫權限，管理員需要授予您在 vCenter Server 中存取全域權限的權限。</block>
+  <block id="c0d2cde9a14e7d58e2ab5a38de5b380d" category="paragraph"><block ref="c0d2cde9a14e7d58e2ab5a38de5b380d" category="inline-link-macro-rx"></block></block>
 </blocks>

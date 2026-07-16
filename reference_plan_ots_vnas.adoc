@@ -18,6 +18,7 @@ ONTAP Select vNAS 是一種解決方案，它允許 ONTAP Select 資料儲存位
 
 
 
+[[basic-requirements-and-restrictions]]
 == 基本要求和限制
 
 ONTAP Select vNAS 解決方案可與任何規模的 ONTAP Select 叢集一起使用。
@@ -42,6 +43,7 @@ NOTE: 這些 VMware 功能支援單節點和多節點 ONTAP Select 叢集。部�
 
 
 
+[[configuration-requirements]]
 == 組態需求
 
 如果您打算在外部儲存陣列（iSCSI、光纖通道、乙太網路光纖通道）上使用 VMFS 資料存放區，則必須先建立 VMFS 儲存資源池，然後才能設定 ONTAP Select 以使用該儲存設備。如果您使用 NFS 資料存放區，則無需建立單獨的 VMFS 資料存放區。所有 vSAN 資料存放區都必須定義在同一個 ESXi 叢集中。
@@ -51,6 +53,7 @@ CAUTION: 在設定主機或執行儲存新增作業時，必須為 VMware vSAN �
 
 
 
+[[best-practices]]
 == 最佳實務
 
 請查閱 VMware 文件，並遵循針對 ESXi 主機所識別的適用最佳實務做法。此外：
