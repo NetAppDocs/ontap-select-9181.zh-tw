@@ -14,7 +14,7 @@ summary: ONTAP Select 是 ONTAP 的純軟體版本，您可以將其作為虛擬
 
 
 [role="lead"]
-ONTAP Select 是 ONTAP 的純軟體版本，您可以將其作為虛擬機器部署在 Hypervisor 主機上。它補充了主流的 FAS、AFF 和 ASA ONTAP 產品套件以及其他純軟體選項，例如 Cloud Volumes ONTAP。
+ONTAP Select 是 ONTAP 的純軟體版本，您可以將其作為虛擬機器部署在 Hypervisor 主機上。它補充了主流的 AFF 和 FAS ONTAP 產品套件以及其他純軟體選項，例如 Cloud Volumes ONTAP。
 
 ONTAP Select 可將內部磁碟機（NVMe、SSD 或 HDD）以及外部陣列儲存轉換為靈活的儲存系統，並提供與專用 ONTAP 儲存系統相同的諸多優勢。您也可以將 ONTAP Select 部署在新伺服器或現有伺服器基礎架構上。ONTAP Select 易於管理，並採用與基於 ONTAP 的解決方案相同的管理軟體，這意味著更低的維運成本和培訓需求。
 
@@ -31,7 +31,7 @@ SnapMirror 軟體可讓您在混合雲的 ONTAP 儲存設備之間移動資料�
 
 透過軟體實施和交付 IT 服務，管理員能夠以前所未有的速度和靈活性快速配置資源。隨著現代資料中心向軟體定義基礎架構（SDI）架構遷移，您可以將最有價值的 IT 資產與底層實體基礎架構分離，從而提供靈活性、可擴充性和可程式性。
 
-在資料分散於各個直接連接儲存設備（DAS）孤島的商品化世界中，資料行動性和管理已成為更複雜的問題。軟體定義儲存設備（SDS）已成為 SDI 領域的重要組成部分，以解決這些問題及其他相關問題。
+在資料分散於各個直連式儲存設備 (DAS) 孤島的商品化世界中，資料存取與管理已成為日益複雜的問題。軟體定義儲存設備 (SDS) 的出現，使其成為軟體定義基礎架構 (SDI) 領域的重要組成部分，旨在解決這些問題及其他相關問題。
 
 ONTAP Select 是 NetApp 針對 SDS 市場的解決方案。ONTAP Select 將企業級儲存管理功能引入軟體定義的資料中心、並將 NetApp Data Fabric 架構擴展到極端邊緣使用案例、包括物聯網（IoT）和戰術伺服器。
 
@@ -130,6 +130,7 @@ NOTE: 從 ONTAP Select 9.16.1 開始，支援手動更新 ARP，並且 ARP 功�
 +
 不支援對叢集 IPspace 進行任何修改，包括新增或移除連接埠、虛擬區域網路（VLAN）或連結聚合群組。
 
+* 非同步 SnapMirror 中的一致性群組
 * Fibre Channel
 +
 不支援 Fibre Channel 和 Fibre Channel over Ethernet。
@@ -153,7 +154,7 @@ NOTE: 從 ONTAP Select 9.16.1 開始，支援手動更新 ARP，並且 ARP 功�
 不支援修改 ONTAP 連接埠的屬性，包括速度、雙工和流量控制。
 
 * 服務處理器
-* SVM 遷移
+* SVM-Migrate
 * SnapLock Compliance
 * SnapMirror 主動同步
 * VMware HCX

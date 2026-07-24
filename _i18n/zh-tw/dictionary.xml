@@ -94,7 +94,6 @@
   <block id="c94bc3200f704807c4c41ce4c2e2b2d8" category="paragraph">您必須對 ONTAP Select 叢集中使用的每個主機執行升級程序。</block>
   <block id="ffc775822cbd19e463401855c97e8181" category="summary">ONTAP Select MetroCluster SDS 提供增強的保護和經濟高效的實施方案。</block>
   <block id="24d0d0c7fc9a3866a568dea751e3cd63" category="doc">了解 ONTAP Select 資料保護與效率</block>
-  <block id="fd1f31b53e7242c3be0dbe67d6dbb5fb" category="paragraph">ONTAP Select 是以 ONTAP 儲存軟體為基礎所建置、採用高可用度、無共享的橫向擴充架構、有效率地提供企業儲存服務。您可以部署包含 1、2、4、6、8、10 或 12 個節點的解決方案，每個節點最高可提供 400TB 的原始容量，支援 NFS、SMB/CIFS 和 iSCSI 連接的儲存。您可以利用原生重複資料刪除和壓縮功能，透過提高有效容量來降低儲存成本。橫向擴充架構可實現高可用度和不中斷營運的資料移動性、以利進行負載平衡或硬體維護。</block>
   <block id="b489b293d6cbe8b86835d3cac8c315fb" category="section-title">快照資料保護</block>
   <block id="467385c0c4913cc96395e5493d47b3bc" category="paragraph">ONTAP Select 包含資料保護功能，包括快照和 SnapMirror 軟體。您可以快速將資料複寫到其他 ONTAP 儲存設備，無論是在內部部署、遠端站台或雲端。如果您必須快速恢復資料、SnapRestore 軟體可以使用本機快照在幾秒鐘內恢復整個檔案系統或資料磁碟區，無論容量或檔案數量為何。</block>
   <block id="787fb8fbafed37b77c3881f9e0c851a0" category="section-title">MetroCluster 軟體定義儲存</block>
@@ -1101,14 +1100,12 @@
   <block id="0e68718563c850d8c86e630de430e588" category="paragraph">您可以使用 Deploy 虛擬機器的 IP 或網域名稱存取線上文件頁面。若要顯示該頁面，請在瀏覽器中輸入下列格式的 URL（將適當的 IP 位址或網域名稱替換為您的 Deploy VM 執行個體）：<block ref="65b6906201e24740d3ed28588ffd2826" prefix=" " category="inline-code"></block></block>
   <block id="d5955f327d5d79aa3434b5772a31b4d8" category="summary">ONTAP Select 是 ONTAP 的純軟體版本，您可以將其作為虛擬機器部署在虛擬機器管理程式主機上。它補充了主流的 FAS 和 AFF ONTAP 產品套件以及其他純軟體選項，例如 Cloud Volumes ONTAP。</block>
   <block id="ecfebb50ecfee3163729b1b24cfa5d09" category="doc">了解 ONTAP Select</block>
-  <block id="69bbee1943d709d1872e201eef4b29a8" category="paragraph">ONTAP Select 是 ONTAP 的純軟體版本，您可以將其作為虛擬機器部署在 Hypervisor 主機上。它補充了主流的 FAS、AFF 和 ASA ONTAP 產品套件以及其他純軟體選項，例如 Cloud Volumes ONTAP。</block>
   <block id="00a3caa2896a927e39b353d23b56eb2d" category="paragraph">ONTAP Select 可將內部磁碟機（NVMe、SSD 或 HDD）以及外部陣列儲存轉換為靈活的儲存系統，並提供與專用 ONTAP 儲存系統相同的諸多優勢。您也可以將 ONTAP Select 部署在新伺服器或現有伺服器基礎架構上。ONTAP Select 易於管理，並採用與基於 ONTAP 的解決方案相同的管理軟體，這意味著更低的維運成本和培訓需求。</block>
   <block id="8307546cfa4f0ccad4627a2dcd4f46fa" category="paragraph">ONTAP Select 提供兩種互補的授權模式—容量層級和完全靈活的容量池，以滿足您的容量使用需求。兩種授權模式均可讓您以低至 1TB 的增量增加容量。例如，您可以從幾 TB 的容量開始，並隨著專案的成長動態添加容量。如果您使用容量池，則可以在專案完成後根據需要重新分配容量。</block>
   <block id="5b6d4054ef7052cdbac6938952fde107" category="paragraph">ONTAP Select 已整合到 VMware vSphere 和 Kernel-based Virtual Machine（KVM）等雲端管理框架中。這有助於加速檔案服務、主目錄、軟體開發環境和應用程式測試等新專案的部署。</block>
   <block id="39de1f5e6bbe7e17017c377d3305e9fd" category="paragraph">SnapMirror 軟體可讓您在混合雲的 ONTAP 儲存設備之間移動資料，以便您輕鬆存取所需位置的資料。例如、您可以快速啟動環境來證明想法。之後、您可以將專案移至專屬的儲存平台以進行正式作業部署、或是將其作為開發工作流程的一部分、使其更容易在雲端中存取。</block>
   <block id="9ed6c695ae7ec8113471a76ddcea07cf" category="section-title">軟體定義儲存設備</block>
   <block id="9c191e042a5bb50dde6bcacd73b9fc18" category="paragraph">透過軟體實施和交付 IT 服務，管理員能夠以前所未有的速度和靈活性快速配置資源。隨著現代資料中心向軟體定義基礎架構（SDI）架構遷移，您可以將最有價值的 IT 資產與底層實體基礎架構分離，從而提供靈活性、可擴充性和可程式性。</block>
-  <block id="718d7c969f416878691ffcaa2bdf3ca1" category="paragraph">在資料分散於各個直接連接儲存設備（DAS）孤島的商品化世界中，資料行動性和管理已成為更複雜的問題。軟體定義儲存設備（SDS）已成為 SDI 領域的重要組成部分，以解決這些問題及其他相關問題。</block>
   <block id="b2c8689de5a7643d75bcb087da31d4a0" category="paragraph">ONTAP Select 是 NetApp 針對 SDS 市場的解決方案。ONTAP Select 將企業級儲存管理功能引入軟體定義的資料中心、並將 NetApp Data Fabric 架構擴展到極端邊緣使用案例、包括物聯網（IoT）和戰術伺服器。</block>
   <block id="5e75bdbfd3f02cf9f655d512b767dc1f" category="section-title">兩個軟體元件</block>
   <block id="1524f7469af0e3274a12cb0f88c7e172" category="paragraph">ONTAP Select 由兩個主要軟體元件組成：</block>
@@ -1157,7 +1154,6 @@
   <block id="6c9348bc5d04685460e6acda750ab989" category="list-text">ONTAP 連接埠屬性</block>
   <block id="b360fb78c737d920cd251b2f7358f606" category="paragraph">不支援修改 ONTAP 連接埠的屬性，包括速度、雙工和流量控制。</block>
   <block id="b77e0c9663536ba98dbe087f083ddb67" category="list-text">服務處理器</block>
-  <block id="363ac709cba54fea743eb36bb06d23c7" category="list-text">SVM 遷移</block>
   <block id="c38c45e0a73411d375d048ee41944853" category="list-text">SnapLock Compliance</block>
   <block id="c0b79db5f258f0c991a383cbdbf001dd" category="list-text">SnapMirror 主動同步</block>
   <block id="b7e93a737ead6d7716c8af57ebde241a" category="list-text">VMware HCX</block>
@@ -1684,7 +1680,6 @@
   <block id="f6dbfcdd0f076283f4df3208ab633467" category="paragraph">您可以使用 OVF 範本在 VMware ESXi 上部署 ONTAP Select 叢集的 90 天評估執行個體，叢集規模從單節點到 99 個節點不等。無論您是現有客戶還是新客戶，都可以下載評估授權。例如，如果您是現有客戶，並且希望在購買授權之前試用新的組態，即可使用此評估授權。</block>
   <block id="f9f5faecdbf3b023cf5652fa18b8c4ee" category="list-text">您無需從 NetApp 取得序號或儲存容量授權。</block>
   <block id="591ba54105fed20bc4bc8e31cee68eb3" category="list-text">您可以為使用者資料分配與購買授權相同的儲存容量。</block>
-  <block id="10db4e06bde0886ecc0f97ce3a350d45" category="list-text">您無法將節點從評估授權升級到購買授權。</block>
   <block id="de68e769353f85803d50af3ad5192201" category="list-text">您只能使用 vCenter 帳戶部署 OVF 範本。目前不支援直接安裝到 ESXi 主機。</block>
   <block id="5ec5e552cbceca200e1e7e00c7ece71f" category="list-text">您必須使用 vSphere 獨立用戶端或 vSphere Web 用戶端（ESXi 8.0 及更高版本的唯一選項）安裝 OVF 範本（包含在 ova 檔案中）。您不使用 ONTAP Select Deploy 管理公用程式。</block>
   <block id="ced8179cabed6ee9f3127b0c5fafd2db" category="section-title">步驟 1：準備 ONTAP Select 叢集主機</block>
@@ -4059,4 +4054,10 @@
   <block id="3c877a9561264bd22f7ed715473c9258" category="paragraph">要在 vCenter 中建立和管理 vSAN Express Storage Architecture (ESA)，您需要以下 vSphere 內容庫權限：</block>
   <block id="913b24f487842d48914e3794480e83cc" category="admonition">要存取內容庫權限，管理員需要授予您在 vCenter Server 中存取全域權限的權限。</block>
   <block id="c0d2cde9a14e7d58e2ab5a38de5b380d" category="paragraph"><block ref="c0d2cde9a14e7d58e2ab5a38de5b380d" category="inline-link-macro-rx"></block></block>
+  <block id="35c865322fb18e49c0e0d5db1a728645" category="paragraph">ONTAP Select 基於 ONTAP 儲存軟體構建，採用高可用度的無共享橫向擴展架構，高效地提供企業儲存設備服務。您可以部署包含 1、2、4、6、8、10 或 12 個節點的解決方案，每個節點最高可提供 400TB 的原始容量，支援 NFS、SMB/CIFS 和 iSCSI 連接的儲存設備。您可以運用原生重複資料刪除和壓縮，透過提高有效容量來降低儲存設備成本。橫向擴展架構可實現高可用度和無中斷的資料存取，從而滿足負載平衡或硬體維護的需求。</block>
+  <block id="8caf5b702720dd48353d13906ca133b0" category="paragraph">ONTAP Select 是 ONTAP 的純軟體版本，您可以將其作為虛擬機器部署在 Hypervisor 主機上。它補充了主流的 AFF 和 FAS ONTAP 產品套件以及其他純軟體選項，例如 Cloud Volumes ONTAP。</block>
+  <block id="8132fb388d9980a45bf3e73000044650" category="paragraph">在資料分散於各個直連式儲存設備 (DAS) 孤島的商品化世界中，資料存取與管理已成為日益複雜的問題。軟體定義儲存設備 (SDS) 的出現，使其成為軟體定義基礎架構 (SDI) 領域的重要組成部分，旨在解決這些問題及其他相關問題。</block>
+  <block id="972cc139ce081218935961184ceb872f" category="list-text">非同步 SnapMirror 中的一致性群組</block>
+  <block id="2dd64bd29dd925332151bac56daee54d" category="list-text">SVM-Migrate</block>
+  <block id="191cca9b69f6675fd704265efaee5cd4" category="paragraph">ONTAP Select 不支援非同步 SnapMirror 中的一致性群組。</block>
 </blocks>
