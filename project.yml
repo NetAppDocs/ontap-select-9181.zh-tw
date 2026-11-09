@@ -12,14 +12,14 @@ settings:
   versions:
   - version-number: 9.18.1
     url: "/ontap-select-9181"
-  - version-number: 9.19.1
+  - version-number: 9.20.1
     url: "/ontap-select"
+  - version-number: 9.19.1
+    url: "/ontap-select-9191"
   - version-number: 9.17.1
     url: "/ontap-select-9171"
   - version-number: 9.16.1
     url: "/ontap-select-9161"
-  - version-number: 9.15.1
-    url: "/ontap-select-9151"
   langs: zh-tw,us-en,de-de,es-es,fr-fr,it-it,pt-br,ja-jp,ko-kr,zh-cn
 sidebar:
   entries:
